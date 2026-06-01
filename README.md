@@ -70,3 +70,15 @@ G --> H[Output: Semantic Representation]
 ‌
 style C fill:#f96,stroke:#333,stroke-width:4px
 style E fill:#f66,stroke:#333,stroke-dasharray: 5 5
+---
+‌
+### 📌 Model Architecture Overview
+‌
+This diagram illustrates the internal workflow of the DIINA-Y architecture, emphasizing the novel Dynamic Inhibitory Regulator (DIR) layer. Unlike standard transformer models, DIINA-Y employs a bio-inspired mechanism to manage tonal complexity in the Yorùbá language.
+‌
+#### Key Components:
+- Dynamic Inhibitory Regulator (DIR): Acts as a neural gatekeeper. It dynamically evaluates the input signals and bifurcates the data flow into excitatory and inhibitory pathways.
+- Tonal Noise Suppression: A specialized inhibitory branch that actively suppresses semantic noise caused by tonal ambiguity (e.g., distinguishing between words like ọkọ, ọkọ̀, and ọkọ́).
+- Latent Feature Fusion: A convergence layer that merges the refined signals from the Multi-Head Attention mechanism and the suppressed noise features to produce a high-fidelity semantic representation.
+‌
+---
