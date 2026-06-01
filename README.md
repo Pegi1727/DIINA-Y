@@ -98,3 +98,5 @@ This diagram illustrates the internal workflow of the DIINA-Y architecture, emph
 bash
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+bash
+pip install -r requirements.txt
