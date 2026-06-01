@@ -95,3 +95,6 @@ This diagram illustrates the internal workflow of the DIINA-Y architecture, emph
 - Latent Feature Fusion: A convergence layer that merges the refined signals from the Multi-Head Attention mechanism and the suppressed noise features to produce a high-fidelity semantic representation.
 ‌
 ---
+bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
