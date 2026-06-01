@@ -100,3 +100,17 @@ python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 bash
 pip install -r requirements.txt
+python
+from diina_y import DIINAModel, Tokenizer
+‌
+# Load the model and tokenizer
+model = DIINAModel.from_pretrained('diina-y-v1')
+tokenizer = Tokenizer.from_pretrained('diina-y-v1')
+‌
+# Input text with tonal markers
+text = "ọkọ (husband) vs ọkọ̀ (vehicle) vs ọkọ́ (spear)"
+inputs = tokenizer(text, return_tensors="pt")
+‌
+# Forward pass through the DIR layer
+outputs = model(**inputs)
+print(outputs.semantic_representation)
