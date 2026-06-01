@@ -30,3 +30,18 @@ H_{final} = H_{t} \odot (1 - G_{inh})
 ‌
 This operation ensures that 'semantic noise'—specifically incorrect tonal interpretations—is actively suppressed before reaching the final classification layer.
 ```
+markdown
+‌
+---
+### Linguistic Case Study: Tonal Disambiguation
+‌
+To evaluate the efficacy of **DIINA-Y**, we focus on high-entropy tonal homographs in Yorùbá. A classic example is the lexical unit **"Oko"**, which bifurcates into distinct semantic paths based on tone:
+‌
+| Token | Marks | Meaning | Contextual Signal |
+| :--- | :--- | :--- | :--- |
+| **Oko** | Standard | Farm | Agricultural / Land |
+| **Ọkọ** | Low-Mid | Husband | Marital / Kinship |
+| **Ọkọ̀** | Low-Low | Vehicle | Transportation |
+‌
+**DIINA-Y's Approach:**
+When the model encounters "Oko" in a sequence containing "Subu" (fell) or "Aya" (wife), the **Dynamic Inhibitory Regulator (DIR)** suppresses the 'Farm' and 'Vehicle' representations, allowing the 'Husband' or 'Marital' hidden states to dominate the output. This prevents the "Tonal Noise" that often leads to catastrophic forgetting in standard NLP models.
