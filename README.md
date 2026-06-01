@@ -1,4 +1,5 @@
-markdown
+`# DIINA-Y: Yorùbá Tonal Disambiguation`
+`Official implementation of the DIINA-Y model for Yorùbá Tonal Disambiguation using Dynamic Inhibitory Regulators (DIR).`
 # DIINA-Y: Tonal Language NLP
 Framework for Yoruba language disambiguation using Inhibitory Control.
 Author: Dr. Pegah Merrikhi
