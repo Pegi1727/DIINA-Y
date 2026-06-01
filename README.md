@@ -57,3 +57,16 @@ The model is evaluated using the **MENYO-20k** dataset, a multi-domain parallel 
 - **Evaluation Metric:** Beyond standard BLEU scores, we utilize a custom **Tonal Accuracy Metric (TAM)** to measure how well the DIR mechanism preserves semantic integrity in ambiguous contexts.
 ‌
 Our experiments demonstrate that the inhibitory gating layer reduces semantic drift by **14.2%** compared to baseline Transformer-Small architectures.
+mermaid
+graph TD
+A[Input: Yorùbá Text] --> B(Tonal Embedding Layer)
+B --> C{Dynamic Inhibitory Regulator - DIR}
+C -->|Excitatory Signal| D[Multi-Head Attention]
+C -->|Inhibitory Signal| E[Tonal Noise Suppression]
+D --> F[Latent Feature Fusion]
+E --> F
+F --> G[Feed Forward Network]
+G --> H[Output: Semantic Representation]
+‌
+style C fill:#f96,stroke:#333,stroke-width:4px
+style E fill:#f66,stroke:#333,stroke-dasharray: 5 5
